@@ -1,4 +1,5 @@
-# Colon Cancer Histopathological Images – Exploratory Analysis and Feature Engineering
+# Histopathology-Based Deep Feature Extraction and Exploratory Analysis for Colon Adenocarcinoma Detection
+
 
 ## Project Overview
 This project performs preprocessing and exploratory analysis of the **Colon Cancer Histopathological Images** dataset. The dataset contains high-resolution microscope images of colon tissue labeled as **normal** or **adenocarcinoma (malignant)**.
