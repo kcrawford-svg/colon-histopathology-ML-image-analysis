@@ -2,24 +2,40 @@
 
 
 ## Project Overview
-This project performs preprocessing and exploratory analysis of the **Colon Cancer Histopathological Images** dataset. The dataset contains high-resolution microscope images of colon tissue labeled as **normal** or **adenocarcinoma (malignant)**.
+This project performs exploratory data analysis, feature engineering, and baseline machine-learning preparation on a publicly available colon cancer histopathology image dataset. 
+
+The goal is to identify discriminative image features that can separate benign colon tissue from adenocarcinoma tissue, using both traditional feature extraction (DAISY) and dimensionality reduction (PCA) as pre-deep-learning baselines.
 
 **Goals:**  
-- Explore image statistics (size, color channels, class distribution)  
-- Visualize sample images  
-- Preprocess images for machine learning (resize, recolor, flatten)  
-- Apply dimensionality reduction (PCA, Randomized PCA)  
-- Extract meaningful image features (e.g., DAISY descriptors)  
-- Evaluate features for predictive modeling
-
-**Prediction Task:**  
-Binary classification:  
-- `colon_n` → normal colon tissue  
-- `colon_aca` → colon adenocarcinoma  
+- Perform statistical and visual analysis of histopathology images
+- Preprocess high-resolution microscopy slides into ML-ready formats
+- Engineer biologically-relevant texture & morphology features
+- Compare PCA-based latent representations vs classical feature descriptors
+- Build a baseline classifier for tumor vs normal tissue using engineered features
+-	Prepare pipeline for future extension into deep learning (CNN, MIL, or ViT)
+  
 
 ---
 
-## Dataset
+**Methods Implemented**
+
+- Image preprocessing (resize, RGB normalization, flattening)
+- Feature extraction using DAISY (Dense SIFT-like descriptor)
+- Dimensionality reduction using PCA & randomized PCA
+- Baseline classifier using engineered feature vectors
+- Exploratory visualization (classwise PCA embedding plots, etc)
+
+**Dataset Summary**
+
+- Modality: Bright-field microscopy (H&E stained tissue)
+- Resolution: High-resolution patches (color RGB)
+- Classes: Normal colon epithelium (colon_n) vs adenocarcinoma (colon_aca)
+- Task Type: Binary classification, patch-level
+
+
+
+
+## Dataset Source
 **Source:** [Kaggle – Lung & Colon Cancer Histopathological Images](https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images)  
 
-Please download the `colon_image_sets` folder and place it in `data/`.
+
